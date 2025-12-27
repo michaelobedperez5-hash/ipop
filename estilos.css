@@ -1,0 +1,75 @@
+/* GENERAL */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* CABECERA */
+header {
+    background: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* MENÚ */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #005599;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #003f73;
+}
+
+/* CONTENIDO */
+main {
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+/* FOTO DEL INDEX */
+.foto-formal {
+    width: 180px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
