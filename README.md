@@ -17,7 +17,7 @@ El propósito de esta web es mostrar de forma clara y organizada mi identidad pe
 Publicación
 
 Este sitio está publicado mediante GitHub Pages y puede visitarse en el siguiente enlace:
-()
+(https://michaelobedperez5-hash.github.io/ipop/)
 Tecnologías utilizadas
 
    - HTML5
