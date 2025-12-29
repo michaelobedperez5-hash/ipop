@@ -257,206 +257,83 @@ main p {
     line-height: 1;
 }
 
-
-/* Estilos para la sección DAFO */
-.dafo {
-    background: #f8f9fa;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 30px auto;
-    max-width: 900px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.08);
-}
-
-.dafo h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 28px;
-}
-
-.dafo h3 {
-    margin-top: 25px;
-    color: #0056b3;
-    font-size: 22px;
-    border-left: 4px solid #0056b3;
-    padding-left: 10px;
-}
-
-.dafo ul {
-    margin: 10px 0 20px 20px;
-    padding-left: 15px;
-}
-
-.dafo ul li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-    color: #444;
-}
-
-.competencias-resumen {
-    width: 800px;
-    max-width: 860px;
-    margin: 40px auto;
-    padding:40px  30px;
-    background: #bcd8ff;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.08);
-    padding: 40px 40px 40px 30px; 
-}
-
-.titulo-seccion {
-    text-align: center;
-    font-size: 30px;
-    color: #1a1a1a;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.bloque {
-    background: rgb(255, 251, 233);
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.06);
-    border-left: 6px solid #ccc;
-}
-
-.bloque h3 {
-    margin-bottom: 10px;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.bloque p {
-    color: #585858;
-    line-height: 1.7;
-    font-size: 16px;
-}
-
-/* Contenedor de dos columnas para DAFO + Primer Test */ 
+/* CONTENEDOR DE DOS COLUMNAS */
 .contenedor-doble {
-     display: grid; grid-template-columns: 1fr 1fr;
-      gap: 30px; margin-bottom: 50px; 
-}
-
-
-/* CONTENEDOR AZUL DEL PERFIL PERSONAL */
-.contenedor-doble-azul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 30px;
-    background: #040027; /* azul intenso suave */
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-/* Fondo azul intenso detrás */
+
+/* BLOQUE DAFO (columna izquierda) */
 .bloque-dafo-fondo {
-    background: #01003f; /* azul intenso */
+    flex: 1;
+    min-width: 350px;
+    background: #01003f;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
-}
-
-/* Bloque blanco con borde amarillo y sombra */
-.bloque-dafo {
-    text-align: justify;
-    background: #ffffff;
-    border-left: 6px solid #f1c40f; /* amarillo vivo */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    line-height: 1.2;          /* más espacio entre líneas */
-    font-size: 17px;           /* letra un poco más grande */
-    padding: 25px;        /* más espacio interno */
-
-}
-/* Mejorar legibilidad del DAFO */
-
-    
-.bloque-dafo h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.bloque-dafo ul li {
-    margin-bottom: 10px;       /* más espacio entre puntos */
-}
-
-/* Cada bloque dentro del contenedor */
-.bloque-azul {
-    background:  #01003f;;
-    padding: 20px;
-    border-radius: 12px;
-}
-
-.bloque-dafo-fondo {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .bloque-dafo {
-    flex: 1; /* ocupa todo el alto disponible */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+  background: #ffffff;
+  border-left: 6px solid #f1c40f;
+  border-radius: 12px;
+  padding: 50px 40px; /* MÁS ESPACIO INTERNO */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  line-height: 1.8;   /* MÁS ESPACIO ENTRE LÍNEAS */
+  font-size: 16.7px;    /* LIGERAMENTE MÁS GRANDE */
+  overflow-wrap: break-word;
+  text-align: justify;
 }
 
 
-
-
-/* Caja azul claro centrada */ 
-
-
+/* BLOQUE RESUMEN (columna derecha) */
+.bloque-azul {
+    flex: 1;
+    min-width: 350px;
+    background: #01003f;
+    padding: 20px;
+    border-radius: 12px;
+     display: flex; flex-direction: column;
+}
 
 .competencias-resumen {
-     width: 800px; max-width: 860px;
-     margin: 0 auto; padding: 40px 30px; 
-     background: #bcd8ff; /* azul claro */ 
-     border-radius: 12px;
-     box-shadow: 0 0 15px rgba(0,0,0,0.08);
-     } 
-/* Bloques del resumen con fondo hueso */
+    height: 100%;
+    background: #bcd8ff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    overflow-wrap: break-word;
+}
+
+/* BLOQUES INTERNOS DEL RESUMEN */
 .bloque-h {
-    font-family: "Merriweather";
-    text-align: justify;
-    background:  rgb(255, 251, 233); /* hueso suave */
+    background: rgb(255, 251, 233);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    width: 100%;
+    border: 1px solid #e5e5e5;
     box-sizing: border-box;
-    border: 1px solid #e5e5e5; /* borde gris suave */
-    color: #333; /* texto oscuro */
+    text-align: justify;
 }
 
+/* BORDES DE COLORES */
+.borde-azul { border-left: 6px solid #007bff; }
+.borde-verde { border-left: 6px solid #28a745; }
+.borde-amarillo { border-left: 6px solid #ffc107; }
+.borde-rojo { border-left: 6px solid #dc3545; }
 
-
-/* Bordes izquierdos de colores */
-.borde-azul {
-    border-left: 6px solid #007bff;
-}
-
-.borde-verde {
-    border-left: 6px solid #28a745;
-}
-
-.borde-amarillo {
-    border-left: 6px solid #ffc107;
-}
-
-.borde-rojo {
-    border-left: 6px solid #dc3545;
-}
-
-/* HOVER PARA BLOQUES AZULES DEL PERFIL PERSONAL */
+/* HOVERS */
 .bloque-dafo-fondo,
 .bloque-azul {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        flex: 1;
+        min-width: 350px; /* ESTO EVITA QUE SE APLASTEN */
 }
 
 .bloque-dafo-fondo:hover,
@@ -465,7 +342,6 @@ main p {
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* HOVER PARA EL BLOQUE BLANCO INTERNO */
 .bloque-dafo,
 .competencias-resumen {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -476,9 +352,6 @@ main p {
     transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.20);
 }
-
-
-
 
 /* Sección del test de intereses */
 .intereses-profesionales {
@@ -509,15 +382,6 @@ main p {
     font-style: italic;
 }
 
-/* Resumen textual */
-.resumen-intereses {
-    text-align: justify;
-    background: rgb(50, 1, 114);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
 .resumen-intereses h2 {
     font-size: 26px;
     color: #3f51b5; /* azul elegante */
@@ -525,21 +389,17 @@ main p {
     text-align: center;
 }
 
-.resumen-intereses p {
-    font-size: 16px;
-    color: white;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
 /* CONTENEDOR EXPANDIDO A TODO EL ANCHO CON MÁRGENES INTERNOS */
 .intereses-expandido {
+    
+    margin-top:40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     padding: 40px 40px; /* márgenes laterales elegantes */
-    background: linear-gradient(to right, #00102b, #150035);
+    background: linear-gradient(to right,#000135 , #2f0664);
     gap: 40px;
     box-sizing: border-box;
     border-radius: 12px;
@@ -549,7 +409,7 @@ main p {
 /* COLUMNA IZQUIERDA: CAPTURA */
 .intereses-captura {
     flex: 1 1 600px;
-    max-width: 700px;
+    max-width: 680px;
 }
 
 .intereses-captura img {
@@ -561,7 +421,7 @@ main p {
 .intereses-captura figcaption {
     margin-top: 10px;
     font-size: 14px;
-    color: #666;
+    color: #ffffff;
     text-align: center;
     font-style: italic;
 }
