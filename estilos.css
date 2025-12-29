@@ -1,0 +1,1016 @@
+/* GENERAL */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #eef6ff, #ffffff); /* fondo suave */
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lato';
+}
+
+/* CABECERA */
+header {
+    background: linear-gradient(to right, #000713, #150024);
+
+    color: white;
+    padding: 20px;
+}
+
+/* Título centrado */
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Fila con foto a la izquierda y nombre a la derecha */
+.perfil-fila {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra la fila completa */
+    gap: 20px;
+    flex-wrap: wrap; /* para móviles */
+}
+
+/* Foto rectangular */
+.foto-perfil {
+    width: 160px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #333;
+}
+.foto-perfil {
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.foto-perfil:hover {
+    filter: brightness(1.18); /* brillo elegante */
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.35); /* halo suave */
+}
+
+
+/* Contenedor del nombre */
+.perfil-texto {
+    display: flex;
+    align-items: center;
+}
+
+/* Nombre con hover */
+header h2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+header h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #66aaff;
+    transition: width 0.3s ease;
+}
+
+header h2:hover::after {
+    width: 100%;
+}
+
+/* MENÚ */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #130136;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #003f73;
+}
+main {
+    background: rgb(195, 226, 255);
+    padding: 80px 40px 60px;
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+}
+main p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #2c2c2c;
+    margin-bottom: 18px;
+}
+
+
+/* CONTENEDOR TIPO FOLIO */
+.folio-quien-soy {
+    background: #ffffff; /* blanco folio */
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 50px 60px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0; /* borde suave */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    color: #2c2c2c;
+}
+
+/* TÍTULO ELEGANTE */
+.folio-quien-soy h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #1c2a3a;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #007bff; /* línea azul elegante */
+    padding-bottom: 8px;
+}
+
+/* PÁRRAFOS */
+.folio-quien-soy p {
+    font-size: 1.1em;
+    margin-bottom: 18px;
+    text-align: justify; /* estilo informe */
+}
+
+/* EFECTO HOVER SUTIL */
+.folio-quien-soy:hover {
+    transform: translateY(-4px);
+    transition: 0.3s ease;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.ventana-index {
+    text-align: justify;
+    background: linear-gradient(180deg, #f0f4ff, #dce7ff);
+    padding: 40px 50px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 14px;
+    border-left: 6px solid #000135; /* morado elegante */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.ventana-index h2 {
+    text-align: justify;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #3f51b5;
+    
+}
+
+.ventana-index p,
+.ventana-index li {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.ventana-index ul {
+    padding-left: 20px;
+}
+/* Tarjeta elegante */
+.tarjeta-info {
+    background: #fdfdfd; /* fondo hueso claro */
+    border-left: 6px solid #007bff; /* borde azul lateral */
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Hover elegante */
+.tarjeta-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Título */
+.titulo-bloque {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #1c2a3a;
+    letter-spacing: 0.5px;
+}
+
+/* Lista distribuida */
+.lista-distribuida {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 30px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.lista-distribuida li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+}
+
+.lista-distribuida li span {
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+
+/* Estilos para la sección DAFO */
+.dafo {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.dafo h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+.dafo h3 {
+    margin-top: 25px;
+    color: #0056b3;
+    font-size: 22px;
+    border-left: 4px solid #0056b3;
+    padding-left: 10px;
+}
+
+.dafo ul {
+    margin: 10px 0 20px 20px;
+    padding-left: 15px;
+}
+
+.dafo ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.competencias-resumen {
+    width: 800px;
+    max-width: 860px;
+    margin: 40px auto;
+    padding:40px  30px;
+    background: #bcd8ff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    padding: 40px 40px 40px 30px; 
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 30px;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.bloque {
+    background: rgb(255, 251, 233);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.06);
+    border-left: 6px solid #ccc;
+}
+
+.bloque h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.bloque p {
+    color: #585858;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Contenedor de dos columnas para DAFO + Primer Test */ 
+.contenedor-doble {
+     display: grid; grid-template-columns: 1fr 1fr;
+      gap: 30px; margin-bottom: 50px; 
+}
+
+
+/* CONTENEDOR AZUL DEL PERFIL PERSONAL */
+.contenedor-doble-azul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: #040027; /* azul intenso suave */
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+/* Fondo azul intenso detrás */
+.bloque-dafo-fondo {
+    background: #01003f; /* azul intenso */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+/* Bloque blanco con borde amarillo y sombra */
+.bloque-dafo {
+    text-align: justify;
+    background: #ffffff;
+    border-left: 6px solid #f1c40f; /* amarillo vivo */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    line-height: 1.2;          /* más espacio entre líneas */
+    font-size: 17px;           /* letra un poco más grande */
+    padding: 25px;        /* más espacio interno */
+
+}
+/* Mejorar legibilidad del DAFO */
+
+    
+.bloque-dafo h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.bloque-dafo ul li {
+    margin-bottom: 10px;       /* más espacio entre puntos */
+}
+
+/* Cada bloque dentro del contenedor */
+.bloque-azul {
+    background:  #01003f;;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.bloque-dafo-fondo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.bloque-dafo {
+    flex: 1; /* ocupa todo el alto disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+
+/* Caja azul claro centrada */ 
+
+
+
+.competencias-resumen {
+     width: 800px; max-width: 860px;
+     margin: 0 auto; padding: 40px 30px; 
+     background: #bcd8ff; /* azul claro */ 
+     border-radius: 12px;
+     box-shadow: 0 0 15px rgba(0,0,0,0.08);
+     } 
+/* Bloques del resumen con fondo hueso */
+.bloque-h {
+    text-align: justify;
+    background:  rgb(255, 251, 233); /* hueso suave */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5; /* borde gris suave */
+    color: #333; /* texto oscuro */
+}
+
+
+
+/* Bordes izquierdos de colores */
+.borde-azul {
+    border-left: 6px solid #007bff;
+}
+
+.borde-verde {
+    border-left: 6px solid #28a745;
+}
+
+.borde-amarillo {
+    border-left: 6px solid #ffc107;
+}
+
+.borde-rojo {
+    border-left: 6px solid #dc3545;
+}
+
+/* HOVER PARA BLOQUES AZULES DEL PERFIL PERSONAL */
+.bloque-dafo-fondo,
+.bloque-azul {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bloque-dafo-fondo:hover,
+.bloque-azul:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* HOVER PARA EL BLOQUE BLANCO INTERNO */
+.bloque-dafo,
+.competencias-resumen {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bloque-dafo:hover,
+.competencias-resumen:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+}
+
+
+
+
+/* Sección del test de intereses */
+.intereses-profesionales {
+    max-width: none;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #eef0f9, #f5f0fa);
+    border-radius: 14px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+/* Imagen del gráfico */
+.grafico-intereses {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grafico-intereses img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+}
+
+.grafico-intereses figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Resumen textual */
+.resumen-intereses {
+    text-align: justify;
+    background: rgb(50, 1, 114);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.resumen-intereses h2 {
+    font-size: 26px;
+    color: #3f51b5; /* azul elegante */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.resumen-intereses p {
+    font-size: 16px;
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+/* CONTENEDOR EXPANDIDO A TODO EL ANCHO CON MÁRGENES INTERNOS */
+.intereses-expandido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px 40px; /* márgenes laterales elegantes */
+    background: linear-gradient(to right, #00102b, #150035);
+    gap: 40px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* COLUMNA IZQUIERDA: CAPTURA */
+.intereses-captura {
+    flex: 1 1 600px;
+    max-width: 700px;
+}
+
+.intereses-captura img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+}
+
+.intereses-captura figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+/* COLUMNA DERECHA: RESUMEN */
+.intereses-resumen {
+    text-align: justify;
+    flex: 1 1 400px;
+    max-width: 500px;
+    background: rgb(247, 242, 253);
+    padding: 40px 30px;
+    border-left: 6px solid #a202ff; /* morado */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+.intereses-resumen h2 {
+    font-size: 26px;
+    color: #3f51b5; /* azul */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intereses-resumen p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+
+/* ============================
+   SECCIÓN PERFIL FORMATIVO – DISEÑO C
+   ============================ */
+
+.formativo-seccion {
+    background: linear-gradient(180deg, #fbeaea, #ffe5e5);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* Tarjetas */
+.tarjeta-formacion {
+    background: rgb(255, 255, 255);
+    border: 2px solid #bcd4f5;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-formacion:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Iconos */
+.icono-formacion {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Línea del tiempo */
+.linea-tiempo {
+    margin-top: 20px;
+    border-left: 3px solid #7aa7e9;
+    padding-left: 20px;
+}
+
+.evento-tiempo {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.punto-tiempo {
+    width: 14px;
+    height: 14px;
+    background: #7aa7e9;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+}
+
+.contenido-tiempo h4 {
+    margin-bottom: 5px;
+    color: #2f4c7a;
+}
+
+.tarjeta-formacion ul {
+    padding-left: 80px;
+}
+
+.tarjeta-formacion ul li {
+    margin-bottom: 6px;
+}
+
+/* ============================
+   SECCIÓN PERFIL PROFESIONAL
+   ============================ */
+
+/* Bloques generales */
+.bloque {
+    background: #e8f1ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 5px solid #003366;
+}
+
+/* 1. Salidas profesionales */
+.bloque:nth-child(1) {
+    background: #eef6ff; /* azul muy suave */
+    border-left: 6px solid #471eff;
+}
+
+/* 2. Especialización profesional */
+.bloque:nth-child(2) {
+    background: #f0fff4; /* verde suave */
+    border-left: 6px solid #00b894;
+}
+
+/* 3. Ofertas laborales */
+.bloque:nth-child(3) {
+    background: #fff8e6; /* amarillo suave */
+    border-left: 6px solid #fdcb6e;
+}
+
+/* 4. Correo de presentación */
+.bloque:nth-child(4) {
+    background: #fff0f0; /* rojo suave */
+    border-left: 6px solid #e17055;
+}
+
+/* Listas */
+.lista-profesiones li,
+.lista-estrategias li {
+    margin-bottom: 5px;
+}
+
+/* Pestañas */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    padding: 10px 15px;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tab-btn.active {
+    background: #003366;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #003366;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Correo */
+.correo-detalle summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.correo-caja {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #003366;
+    margin-top: 10px;
+}
+
+/* ============================
+   CV COMO IMAGEN + PDF
+   ============================ */
+
+.cv-imagen-contenedor {
+    background: #f4f6f9;
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cv-imagen {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.cv-boton-pdf {
+    display: inline-block;
+    background: #2d3e50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.cv-boton-pdf:hover {
+    background: #1f2c3a;
+}
+/* HOVER PARA BLOQUES DEL PERFIL PROFESIONAL */
+.bloque {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bloque:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+}
+.tab-btn {
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.tab-btn:hover {
+    background: #00224d;
+    color: white;
+    transform: translateY(-3px);
+}
+.cv-imagen {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cv-imagen:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+}
+
+.cv-boton-pdf {
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.cv-boton-pdf:hover {
+    background: #16202b;
+    transform: translateY(-3px);
+}
+
+
+
+/* ============================
+   SECCIÓN SOY PRO – DISEÑO C
+   ============================ */
+
+.soypro-seccion {
+    text-align: justify;
+    background: #f9fff0; /* Fondo suave verde-amarillo */
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* CONTENEDOR GENERAL */
+#soy-pro {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* TÍTULO */
+#soy-pro h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #1c2a3a;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+/* GRID DE TARJETAS */
+.contenedor-pro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* TARJETAS */
+.pro-item {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* HOVER */
+.pro-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* TÍTULO DE CADA TARJETA */
+.pro-item h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 12px;
+}
+
+/* TEXTO */
+.pro-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* VIÑETAS PERSONALIZADAS */
+.pro-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.pro-item ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.pro-item ul li::before {
+    content: "▸";
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+/* Contenedor de tarjetas numeradas */
+.contenedor-pro {
+    counter-reset: tarjeta;
+}
+
+/* Tarjeta individual */
+.pro-item {
+    counter-increment: tarjeta;
+    position: relative;
+    padding-top: 50px; /* espacio para el número */
+}
+
+/* Número visual */
+.pro-item::before {
+    content: "0" counter(tarjeta);
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+    opacity: 0.8;
+}
+
+/* ============================
+   HOVER GLOBAL PARA TODA LA WEB
+   ============================ */
+
+.tarjeta-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    
+}
+.bloque-profesional,
+.bloque-soypro {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque-profesional:hover,
+.bloque-soypro:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+
+/* ============================
+   ICONOS PROFESIONALES MINIMALISTAS
+   ============================ */
+
+
+
+/* PIE DE PÁGINA */
+footer {
+    background: #0c0024;   /* azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 12px 0;       /* ← delgado */
+    font-size: 14px;
+    width: 100%;
+    margin: 0;             /* ← sin separación arriba */
+}
+
+@media (max-width: 600px) { 
+    header h1 { 
+        font-size: 22px;
+    } 
+    header h2 { 
+        font-size: 18px; 
+    } 
+    .foto-perfil {
+        width: 120px; height: 120px; 
+    } 
+    nav ul {
+         flex-direction: column;
+    }
+    nav ul li a { 
+        padding: 12px; font-size: 16px;
+    } 
+    main {
+         width: 95%; margin: 10px auto; padding: 15px; 
+    } 
+    .contenedor-doble { 
+        grid-template-columns: 1fr; 
+    }
+    footer {
+         font-size: 14px; padding: 8px; 
+    }
+    .intereses-expandido { 
+        flex-direction: column; padding: 30px 20px; 
+    } .intereses-captura, .intereses-resumen {
+         max-width: 100%; 
+    }
+    .contenedor-pro {
+         grid-template-columns: 1fr; /* 1 columna en móvil */
+    }
+ }
+ /* Transición suave entre páginas */
+
+
