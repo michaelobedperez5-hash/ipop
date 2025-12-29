@@ -1,4 +1,8 @@
-/* GENERAL */
+* {
+  font-family: "Merriweather", serif;
+}
+
+
 html, body {
     height: 100%;
     width: 100%;
@@ -125,7 +129,6 @@ main {
 
 }
 main p {
-    font-family: 'Segoe UI', sans-serif;
     font-size: 1.05em;
     line-height: 1.7;
     color: #2c2c2c;
@@ -419,6 +422,7 @@ main p {
      } 
 /* Bloques del resumen con fondo hueso */
 .bloque-h {
+    font-family: "Merriweather";
     text-align: justify;
     background:  rgb(255, 251, 233); /* hueso suave */
     padding: 20px;
@@ -603,6 +607,7 @@ main p {
 
 /* Tarjetas */
 .tarjeta-formacion {
+    font-family:"Poppins" ;
     background: rgb(255, 255, 255);
     border: 2px solid #bcd4f5;
     border-radius: 14px;
@@ -852,6 +857,7 @@ main p {
 
 /* GRID DE TARJETAS */
 .contenedor-pro {
+    font-family:"Poppins";
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
     gap: 30px;
@@ -961,18 +967,6 @@ main p {
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-
-/* ============================
-   ICONOS PROFESIONALES MINIMALISTAS
-   ============================ */
-.contenedor, .bloque, .card {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-
-
 /* PIE DE PÁGINA */
 footer {
     background: #0c0024;   /* azul oscuro */
@@ -984,7 +978,7 @@ footer {
     margin: 0;             /* ← sin separación arriba */
 }
 
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
     header h1 { 
         font-size: 22px;
     } 
@@ -1018,7 +1012,5 @@ footer {
          grid-template-columns: 1fr; /* 1 columna en móvil */
     }
     section, div, .contenedor, .bloque { padding: 10px; flex-direction: column; } h1, h2, h3 { text-align: center;
- }
- /* Transición suave entre páginas */
-
-
+    }
+}
